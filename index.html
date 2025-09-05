@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Jeanki JK</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #2c2f33;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background: #23272a;
+            padding: 20px;
+            border-radius: 10px;
+            width: 350px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: none;
+            font-size: 14px;
+        }
+        button {
+            margin-top: 15px;
+            width: 100%;
+            padding: 10px;
+            background: #5865f2;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #4752c4;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Formulario Jeanki JK</h2>
+        <form action="https://formspree.io/f/tu-endpoint" method="POST">
+            <label for="nombre">Nombre de usuario en Discord:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required>
+
+            <label for="rol">Rol al que aplicas:</label>
+            <select id="rol" name="rol" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="Admin">Admin</option>
+                <option value="Mod">Mod</option>
+                <option value="Staff">Staff</option>
+            </select>
+
+            <label for="experiencia">¿Tienes experiencia moderando?</label>
+            <select id="experiencia" name="experiencia" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="Si">Sí</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="motivo">¿Por qué quieres este rol?</label>
+            <textarea id="motivo" name="motivo" rows="4" required></textarea>
+
+            <label for="comentarios">Comentarios Extra:</label>
+            <textarea id="comentarios" name="comentarios" rows="3"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
